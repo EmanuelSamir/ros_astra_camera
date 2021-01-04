@@ -122,7 +122,7 @@ bool CameraDriver::getUVCGainCb(astra_camera::GetUVCGainRequest& req, astra_came
   uint16_t gain;
   uvc_error_t err = uvc_get_gain(devh_, &gain, UVC_GET_CUR);
   res.gain = gain;
-  return (err == UVC_SUCCESS); 
+  return (err == UVC_SUCCESS);
 }
 
 bool CameraDriver::setUVCGainCb(astra_camera::SetUVCGainRequest& req, astra_camera::SetUVCGainResponse& res)
@@ -221,7 +221,11 @@ void CameraDriver::ReconfigureCallback(UVCCameraConfig &new_config, uint32_t lev
     PARAM_INT(iris_absolute, iris_abs, new_config.iris_absolute);
     PARAM_INT(brightness, brightness, new_config.brightness);
 #endif
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 78186a3ffbf8a67cfdf409abeebc68c402b406a0
 
     if (new_config.pan_absolute != config_.pan_absolute || new_config.tilt_absolute != config_.tilt_absolute) {
       if (uvc_set_pantilt_abs(devh_, new_config.pan_absolute, new_config.tilt_absolute)) {
@@ -434,7 +438,11 @@ void CameraDriver::AutoControlsCallback(
       switch (selector) {
       case UVC_PU_WHITE_BALANCE_TEMPERATURE_CONTROL:
         uint8_t *data_char = (uint8_t*) data;
+<<<<<<< HEAD
         config_.white_balance_temperature = 
+=======
+        config_.white_balance_temperature =
+>>>>>>> 78186a3ffbf8a67cfdf409abeebc68c402b406a0
           data_char[0] | (data_char[1] << 8);
         config_changed_ = true;
         break;

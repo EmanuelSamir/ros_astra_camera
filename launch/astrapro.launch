@@ -138,6 +138,10 @@
   <include if="$(arg publish_tf)"
 	   file="$(find astra_camera)/launch/includes/astra_frames.launch">
     <arg name="camera" value="$(arg camera)" />
+<<<<<<< HEAD
+=======
+    <arg name="tf_prefix" value="$(arg tf_prefix)"/>
+>>>>>>> 78186a3ffbf8a67cfdf409abeebc68c402b406a0
   </include>
 
 </launch>
