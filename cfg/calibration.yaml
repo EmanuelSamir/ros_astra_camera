@@ -1,0 +1,26 @@
+image_width: 640
+image_height: 480
+camera_name: embedded_s
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [455.79368,   0.     , 334.11111,
+           0.     , 454.0463 , 245.29408,
+           0.     ,   0.     ,   1.     ]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.082820, -0.143085, 0.003054, 0.004193, 0.000000]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1., 0., 0.,
+         0., 1., 0.,
+         0., 0., 1.]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [457.93094,   0.     , 337.94724,   0.     ,
+           0.     , 460.18137, 246.61015,   0.     ,
+           0.     ,   0.     ,   1.     ,   0.     ]
